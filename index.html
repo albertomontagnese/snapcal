@@ -342,6 +342,68 @@
             margin-top: 5px;
         }
         
+        /* Screenshots Section */
+        .screenshots {
+            padding: 100px 0;
+            background: var(--bg);
+            overflow: hidden;
+        }
+        
+        .screenshots-scroll {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        
+        .screenshots-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .screenshot-item {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+        
+        .screenshot-item:first-child {
+            margin-left: calc((100vw - 1200px) / 2 + 20px);
+        }
+        
+        .screenshot-item:last-child {
+            margin-right: calc((100vw - 1200px) / 2 + 20px);
+        }
+        
+        .screenshot-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .screenshot-item img {
+            height: 500px;
+            width: auto;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .screenshot-item:first-child {
+                margin-left: 20px;
+            }
+            
+            .screenshot-item:last-child {
+                margin-right: 20px;
+            }
+            
+            .screenshot-item img {
+                height: 400px;
+            }
+        }
+        
         /* Footer */
         footer {
             padding: 60px 0 30px;
@@ -452,6 +514,7 @@
             <div class="logo">SnapCal</div>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="privacy-policy.html">Privacy</a></li>
                 <li><a href="terms-of-service.html">Terms</a></li>
@@ -550,6 +613,32 @@
                     <h3>Privacy First</h3>
                     <p>Your health data stays private. We never sell your personal information.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <h2 class="section-title">See It In Action</h2>
+        </div>
+        <div class="screenshots-scroll">
+            <div class="screenshot-item">
+                <img src="screenshots/screenshot_1_home.png" alt="SnapCal Home Screen - Track Your Daily Progress">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshots/screenshot_2_camera.png" alt="SnapCal Camera - Snap Any Meal">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshots/screenshot_3_analysis.png" alt="SnapCal AI Analysis - Instant Results">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshots/screenshot_4_history.png" alt="SnapCal Meal History - Log Every Meal">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshots/screenshot_5_paywall.png" alt="SnapCal Pro - 7-Day Free Trial">
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshots/screenshot_6_goals.png" alt="SnapCal Goals - Personalized For You">
             </div>
         </div>
     </section>
